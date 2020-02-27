@@ -1,0 +1,3 @@
+[submodule "alpaga-cpp"]
+	path = alpaga-cpp
+	url = https://github.com/Alp4ga/alpaga-cpp.git
