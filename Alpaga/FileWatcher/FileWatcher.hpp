@@ -2,7 +2,7 @@
   * @Author: Alpaga
   * @Date: 2019-10-03 16:22:02
  * @Last Modified by: Alpaga
- * @Last Modified time: 2020-01-30 15:41:00
+ * @Last Modified time: 2020-02-27 16:45:27
 */
 
 #pragma once
@@ -66,25 +66,22 @@ class Alpaga::FileWatcher {
 		 * @param action Callback when a new event is coming 
 		*/
 	    void lunch(const std::function<FileAction(const std::string &, FileStatus)> &action) {
-			bool first = true;
+			bool firstRound = true;
 			while(_running == FileAction::Continue) {
-				auto it = _paths.begin();
-				while (it != _paths.end()) {
-					if (!std::filesystem::exists(it->first)) {
-						_running = action(it->first, FileStatus::erased);
-						it = _paths.erase(it);
-					} else {
-						if (first)
-							_running =  action(it->first, FileStatus::in);
-						it++;
-					}                    
+				for (const auto &[file, type] : _paths) {
+					if (!std::filesystem::exists(file)) {
+						_running = action(file, FileStatus::erased);
+						 _paths.erase(file);
+					} else if (firstRound) {
+						_running =  action(file, FileStatus::in);
+					}
 				}
-				if (first)
-					first = false;
+				if (firstRound)
+					firstRound = false;
 
 				for(const auto &file : std::filesystem::recursive_directory_iterator(_pathToWatch)) {
 					const auto current_file_last_write_time = std::filesystem::last_write_time(file);
-					if(!contains(file.path().string())) {
+					if(_paths.find(file.path().string()) == _paths.end()) {
 						_paths[file.path().string()] = current_file_last_write_time;
 						_running = action(file.path().string(), FileStatus::created);
 					} else {
@@ -96,17 +93,6 @@ class Alpaga::FileWatcher {
 				}
 				std::this_thread::sleep_for(_delay);
 			}
-		}
-
-	private:
-		/*! @brief Check if file is already in
-		 * @param key Filename
-		 *
-		 * @return true if file is not found
-		*/
-		bool contains(const std::string &key) {
-        	auto el = _paths.find(key);
-        	return el != _paths.end();
 		}
 
 	private:
