@@ -26,14 +26,14 @@ Handle database management.
 \mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_database_a00f9d0684c4f52bd114a370a3b5b6c61}\label{class_alpaga_1_1_s_q_lite3_1_1_database_a00f9d0684c4f52bd114a370a3b5b6c61}} 
 \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database}{Database}} \& \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database_a00f9d0684c4f52bd114a370a3b5b6c61}{operator=}} (const \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database}{Database}} \&) noexcept=default
 \begin{DoxyCompactList}\small\item\em Default operator= class \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database}{Database}}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database_ac3bd41094a1c692c014a6d0f958b0cd2}{open}} (const std\+::string \&filename, int flags=S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+R\+E\+A\+D\+O\+N\+LY, const char $\ast$z\+Vfs=nullptr)
+void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database_a0d17ee2c4b242911b57dc207fc325159}{open}} (const std\+::string \&filename, int flags=S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+R\+E\+A\+D\+O\+N\+LY, const char $\ast$z\+Vfs=nullptr)
 \begin{DoxyCompactList}\small\item\em Open \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database}{Database}} (See Constructor database to information) \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_database_a7df74780d31d64b3087df0165321861b}\label{class_alpaga_1_1_s_q_lite3_1_1_database_a7df74780d31d64b3087df0165321861b}} 
-void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database_a7df74780d31d64b3087df0165321861b}{close}} ()
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_database_a2eb632bc219038d95c6d3072b68de108}\label{class_alpaga_1_1_s_q_lite3_1_1_database_a2eb632bc219038d95c6d3072b68de108}} 
+void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database_a2eb632bc219038d95c6d3072b68de108}{close}} ()
 \begin{DoxyCompactList}\small\item\em Destructor object Close database. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database_a8e46b55e1965db8abd89535c23333139}{boost}} (size\+\_\+t memory\+Size=0) noexcept
+void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database_a4e85196d7751e71356a69b33ac4adbf5}{boost}} (size\+\_\+t memory\+Size=0) noexcept
 \begin{DoxyCompactList}\small\item\em Active Async on database and write the journal in memory. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database_ab7a500c92113b3c324bfaf138a752892}{exec}} (const std\+::string \&sql)
+void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database_ac438ac272b463d8066d44bc1045b16ca}{exec}} (const std\+::string \&sql)
 \begin{DoxyCompactList}\small\item\em Exec simple query request. \end{DoxyCompactList}\item 
 sqlite3 $\ast$ \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database_a5131e36e0f018f86c6385227f0750cb2}{get\+Database\+Ptr}} () const
 \begin{DoxyCompactList}\small\item\em return the ptr on database \mbox{\hyperlink{namespace_s_q_lite3}{S\+Q\+Lite3}} \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -80,11 +80,11 @@ Contructor \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database}{Database}} 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_database_a8e46b55e1965db8abd89535c23333139}\label{class_alpaga_1_1_s_q_lite3_1_1_database_a8e46b55e1965db8abd89535c23333139}} 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_database_a4e85196d7751e71356a69b33ac4adbf5}\label{class_alpaga_1_1_s_q_lite3_1_1_database_a4e85196d7751e71356a69b33ac4adbf5}} 
 \index{Alpaga::SQLite3::Database@{Alpaga::SQLite3::Database}!boost@{boost}}
 \index{boost@{boost}!Alpaga::SQLite3::Database@{Alpaga::SQLite3::Database}}
 \doxysubsubsection{\texorpdfstring{boost()}{boost()}}
-{\footnotesize\ttfamily Alpaga\+::\+S\+Q\+Lite3\+::\+Database\+::boost (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{memory\+Size = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+{\footnotesize\ttfamily void Alpaga\+::\+S\+Q\+Lite3\+::\+Database\+::boost (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{memory\+Size = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
 
 
 
@@ -95,11 +95,11 @@ Active Async on database and write the journal in memory.
 {\em memory\+Size} & Change the memory size of the database \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_database_ab7a500c92113b3c324bfaf138a752892}\label{class_alpaga_1_1_s_q_lite3_1_1_database_ab7a500c92113b3c324bfaf138a752892}} 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_database_ac438ac272b463d8066d44bc1045b16ca}\label{class_alpaga_1_1_s_q_lite3_1_1_database_ac438ac272b463d8066d44bc1045b16ca}} 
 \index{Alpaga::SQLite3::Database@{Alpaga::SQLite3::Database}!exec@{exec}}
 \index{exec@{exec}!Alpaga::SQLite3::Database@{Alpaga::SQLite3::Database}}
 \doxysubsubsection{\texorpdfstring{exec()}{exec()}}
-{\footnotesize\ttfamily Alpaga\+::\+S\+Q\+Lite3\+::\+Database\+::exec (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sql }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Alpaga\+::\+S\+Q\+Lite3\+::\+Database\+::exec (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sql }\end{DoxyParamCaption})}
 
 
 
@@ -123,11 +123,11 @@ return the ptr on database \mbox{\hyperlink{namespace_s_q_lite3}{S\+Q\+Lite3}}
 \begin{DoxyReturn}{Returns}
 sqlite3 $\ast$ptr 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_database_ac3bd41094a1c692c014a6d0f958b0cd2}\label{class_alpaga_1_1_s_q_lite3_1_1_database_ac3bd41094a1c692c014a6d0f958b0cd2}} 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_database_a0d17ee2c4b242911b57dc207fc325159}\label{class_alpaga_1_1_s_q_lite3_1_1_database_a0d17ee2c4b242911b57dc207fc325159}} 
 \index{Alpaga::SQLite3::Database@{Alpaga::SQLite3::Database}!open@{open}}
 \index{open@{open}!Alpaga::SQLite3::Database@{Alpaga::SQLite3::Database}}
 \doxysubsubsection{\texorpdfstring{open()}{open()}}
-{\footnotesize\ttfamily Alpaga\+::\+S\+Q\+Lite3\+::\+Database\+::open (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{int}]{flags = {\ttfamily SQLITE\+\_\+OPEN\+\_\+READONLY},  }\item[{const char $\ast$}]{z\+Vfs = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Alpaga\+::\+S\+Q\+Lite3\+::\+Database\+::open (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{int}]{flags = {\ttfamily SQLITE\+\_\+OPEN\+\_\+READONLY},  }\item[{const char $\ast$}]{z\+Vfs = {\ttfamily nullptr} }\end{DoxyParamCaption})}
 
 
 

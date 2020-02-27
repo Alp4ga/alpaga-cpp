@@ -1,0 +1,88 @@
+\hypertarget{class_alpaga_1_1_file_watcher}{}\doxysection{Alpaga\+::File\+Watcher Class Reference}
+\label{class_alpaga_1_1_file_watcher}\index{Alpaga::FileWatcher@{Alpaga::FileWatcher}}
+
+
+Handle action in directory Can detect if file is in, created, modified or erased.  
+
+
+
+
+{\ttfamily \#include $<$File\+Watcher.\+hpp$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_alpaga_1_1_file_watcher_a770c3395f0cd6352341d6b72085bcb91}\label{class_alpaga_1_1_file_watcher_a770c3395f0cd6352341d6b72085bcb91}} 
+enum \mbox{\hyperlink{class_alpaga_1_1_file_watcher_a770c3395f0cd6352341d6b72085bcb91}{File\+Status}} \{ {\bfseries in}, 
+{\bfseries created}, 
+{\bfseries modified}, 
+{\bfseries erased}
+ \}
+\begin{DoxyCompactList}\small\item\em Status file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_file_watcher_a2115618c5966f3ce43d929608edbe683}\label{class_alpaga_1_1_file_watcher_a2115618c5966f3ce43d929608edbe683}} 
+enum \mbox{\hyperlink{class_alpaga_1_1_file_watcher_a2115618c5966f3ce43d929608edbe683}{File\+Action}} \{ {\bfseries Stop}, 
+{\bfseries Continue}
+ \}
+\begin{DoxyCompactList}\small\item\em State of the class after detecting a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_alpaga_1_1_file_watcher_a3623cbdd4eeb5dabc5dc125d3b8f3829}{File\+Watcher}} (const std\+::string \&path\+To\+Watch, std\+::chrono\+::duration$<$ int, std\+::milli $>$ delay)
+\begin{DoxyCompactList}\small\item\em Constructor class \mbox{\hyperlink{class_alpaga_1_1_file_watcher}{File\+Watcher}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_file_watcher_a236c45b5737b97027dbdb6030d05fbff}\label{class_alpaga_1_1_file_watcher_a236c45b5737b97027dbdb6030d05fbff}} 
+\mbox{\hyperlink{class_alpaga_1_1_file_watcher_a236c45b5737b97027dbdb6030d05fbff}{File\+Watcher}} (const \mbox{\hyperlink{class_alpaga_1_1_file_watcher}{File\+Watcher}} \&) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default copy Constructor class \mbox{\hyperlink{class_alpaga_1_1_file_watcher}{File\+Watcher}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_file_watcher_aecc9bbaeed4547fea749176bed87fad0}\label{class_alpaga_1_1_file_watcher_aecc9bbaeed4547fea749176bed87fad0}} 
+\mbox{\hyperlink{class_alpaga_1_1_file_watcher}{File\+Watcher}} \& \mbox{\hyperlink{class_alpaga_1_1_file_watcher_aecc9bbaeed4547fea749176bed87fad0}{operator=}} (const \mbox{\hyperlink{class_alpaga_1_1_file_watcher}{File\+Watcher}} \&) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default operator= class \mbox{\hyperlink{class_alpaga_1_1_file_watcher}{File\+Watcher}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_file_watcher_a475eea7f34b0bc9150786511ddf33cc8}\label{class_alpaga_1_1_file_watcher_a475eea7f34b0bc9150786511ddf33cc8}} 
+\mbox{\hyperlink{class_alpaga_1_1_file_watcher_a475eea7f34b0bc9150786511ddf33cc8}{$\sim$\+File\+Watcher}} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Default descrutor class \mbox{\hyperlink{class_alpaga_1_1_file_watcher}{File\+Watcher}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_alpaga_1_1_file_watcher_a535c03e02f1ef0b7cd7cb6633a85235f}{lunch}} (const std\+::function$<$ \mbox{\hyperlink{class_alpaga_1_1_file_watcher_a2115618c5966f3ce43d929608edbe683}{File\+Action}}(const std\+::string \&, \mbox{\hyperlink{class_alpaga_1_1_file_watcher_a770c3395f0cd6352341d6b72085bcb91}{File\+Status}})$>$ \&action)
+\begin{DoxyCompactList}\small\item\em Starting to watch. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handle action in directory Can detect if file is in, created, modified or erased. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_alpaga_1_1_file_watcher_a3623cbdd4eeb5dabc5dc125d3b8f3829}\label{class_alpaga_1_1_file_watcher_a3623cbdd4eeb5dabc5dc125d3b8f3829}} 
+\index{Alpaga::FileWatcher@{Alpaga::FileWatcher}!FileWatcher@{FileWatcher}}
+\index{FileWatcher@{FileWatcher}!Alpaga::FileWatcher@{Alpaga::FileWatcher}}
+\doxysubsubsection{\texorpdfstring{FileWatcher()}{FileWatcher()}}
+{\footnotesize\ttfamily Alpaga\+::\+File\+Watcher\+::\+File\+Watcher (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path\+To\+Watch,  }\item[{std\+::chrono\+::duration$<$ int, std\+::milli $>$}]{delay }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor class \mbox{\hyperlink{class_alpaga_1_1_file_watcher}{File\+Watcher}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path\+To\+Watch} & Path to the directory to watch \\
+\hline
+{\em delay} & Delay between each check \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_alpaga_1_1_file_watcher_a535c03e02f1ef0b7cd7cb6633a85235f}\label{class_alpaga_1_1_file_watcher_a535c03e02f1ef0b7cd7cb6633a85235f}} 
+\index{Alpaga::FileWatcher@{Alpaga::FileWatcher}!lunch@{lunch}}
+\index{lunch@{lunch}!Alpaga::FileWatcher@{Alpaga::FileWatcher}}
+\doxysubsubsection{\texorpdfstring{lunch()}{lunch()}}
+{\footnotesize\ttfamily void Alpaga\+::\+File\+Watcher\+::lunch (\begin{DoxyParamCaption}\item[{const std\+::function$<$ \mbox{\hyperlink{class_alpaga_1_1_file_watcher_a2115618c5966f3ce43d929608edbe683}{File\+Action}}(const std\+::string \&, \mbox{\hyperlink{class_alpaga_1_1_file_watcher_a770c3395f0cd6352341d6b72085bcb91}{File\+Status}})$>$ \&}]{action }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starting to watch. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & Callback when a new event is coming \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Alpaga/\+File\+Watcher/File\+Watcher.\+hpp\end{DoxyCompactItemize}

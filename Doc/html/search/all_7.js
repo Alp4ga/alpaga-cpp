@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['open_18',['open',['../class_alpaga_1_1_s_q_lite3_1_1_database.html#ac3bd41094a1c692c014a6d0f958b0cd2',1,'Alpaga::SQLite3::Database']]],
-  ['operator_3d_19',['operator=',['../class_alpaga_1_1_s_q_lite3_1_1_database.html#a00f9d0684c4f52bd114a370a3b5b6c61',1,'Alpaga::SQLite3::Database::operator=()'],['../class_alpaga_1_1_s_q_lite3_1_1_statement.html#a3792d1110260b08e4a1f9f9d6a66dfbb',1,'Alpaga::SQLite3::Statement::operator=()'],['../class_alpaga_1_1_s_q_lite3_1_1_transaction.html#a097844edb4adbc8f63587fe908f91634',1,'Alpaga::SQLite3::Transaction::operator=()']]]
+  ['load_20',['load',['../class_alpaga_1_1_dynamic_loader.html#a1a0201ebc77bdd744aa528d7cb999a89',1,'Alpaga::DynamicLoader']]],
+  ['lunch_21',['lunch',['../class_alpaga_1_1_file_watcher.html#a535c03e02f1ef0b7cd7cb6633a85235f',1,'Alpaga::FileWatcher']]]
 ];

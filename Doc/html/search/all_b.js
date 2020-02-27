@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['_7edatabase_30',['~Database',['../class_alpaga_1_1_s_q_lite3_1_1_database.html#abbab15a8247ef20f0fe9cb93c0819d49',1,'Alpaga::SQLite3::Database']]],
-  ['_7edynamicloader_31',['~DynamicLoader',['../class_alpaga_1_1_dynamic_loader.html#a48b8658929c54dbb03a79f752d2fc131',1,'Alpaga::DynamicLoader']]],
-  ['_7estatement_32',['~Statement',['../class_alpaga_1_1_s_q_lite3_1_1_statement.html#af8207d75df74e4f08299d911c60effe9',1,'Alpaga::SQLite3::Statement']]],
-  ['_7ethreadpool_33',['~ThreadPool',['../class_alpaga_1_1_thread_pool.html#a9102f5e669bc2025369ef2c90bb67191',1,'Alpaga::ThreadPool']]],
-  ['_7etransaction_34',['~Transaction',['../class_alpaga_1_1_s_q_lite3_1_1_transaction.html#af8ce52eb378695a8a4737b43774ba8a2',1,'Alpaga::SQLite3::Transaction']]]
+  ['task_31',['task',['../class_alpaga_1_1_thread_pool.html#aee7e09fe0d8f3779bbf37ec9512fb767',1,'Alpaga::ThreadPool']]],
+  ['threadpool_32',['ThreadPool',['../class_alpaga_1_1_thread_pool.html',1,'Alpaga::ThreadPool'],['../class_alpaga_1_1_thread_pool.html#a0339bf4235a7ca3429b3da81f144b50f',1,'Alpaga::ThreadPool::ThreadPool()']]],
+  ['transaction_33',['Transaction',['../class_alpaga_1_1_s_q_lite3_1_1_transaction.html',1,'Alpaga::SQLite3::Transaction'],['../class_alpaga_1_1_s_q_lite3_1_1_transaction.html#aa320bc0475fecd8045655bb20f217686',1,'Alpaga::SQLite3::Transaction::Transaction(SQLite3::Database &amp;db)'],['../class_alpaga_1_1_s_q_lite3_1_1_transaction.html#a998d663df57449ec07dcf3802f8adbdf',1,'Alpaga::SQLite3::Transaction::Transaction(const Transaction &amp;) noexcept=default']]]
 ];

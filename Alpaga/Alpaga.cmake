@@ -21,6 +21,8 @@ set(AlpagaSources
 	${AlpagaSourcesDir}/SQLite/Transaction.hpp
 
 	${AlpagaSourcesDir}/Thread/ThreadPool.hpp
+
+	${AlpagaSourcesDir}/FileWatcher/FileWatcher.hpp
 )
 
 add_library(${PROJECT_NAME} STATIC ${AlpagaSources} )
