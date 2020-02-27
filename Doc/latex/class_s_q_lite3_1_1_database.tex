@@ -1,0 +1,132 @@
+\hypertarget{class_s_q_lite3_1_1_database}{}\doxysection{S\+Q\+Lite3\+::Database Class Reference}
+\label{class_s_q_lite3_1_1_database}\index{SQLite3::Database@{SQLite3::Database}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_q_lite3_1_1_database_a1afa70a5c5828d0f67e7606deb2606aa}\label{class_s_q_lite3_1_1_database_a1afa70a5c5828d0f67e7606deb2606aa}} 
+\mbox{\hyperlink{class_s_q_lite3_1_1_database_a1afa70a5c5828d0f67e7606deb2606aa}{Database}} () noexcept
+\begin{DoxyCompactList}\small\item\em Contructor \mbox{\hyperlink{class_s_q_lite3_1_1_database}{Database}} object without init database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_q_lite3_1_1_database_a7eea0c07f87f467646f73445aeeda200}{Database}} (const std\+::string \&database, int flags=S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+R\+E\+A\+D\+O\+N\+LY, const char $\ast$z\+Vfs=nullptr)
+\begin{DoxyCompactList}\small\item\em Contructor \mbox{\hyperlink{class_s_q_lite3_1_1_database}{Database}} object with init database. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_q_lite3_1_1_database_a4a9745a2315f6b4759adaadff75c78d9}\label{class_s_q_lite3_1_1_database_a4a9745a2315f6b4759adaadff75c78d9}} 
+\mbox{\hyperlink{class_s_q_lite3_1_1_database_a4a9745a2315f6b4759adaadff75c78d9}{$\sim$\+Database}} () noexcept
+\begin{DoxyCompactList}\small\item\em Destructor object Close database. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_q_lite3_1_1_database_a1518fa0f6d3e31bb9f55d8c2fbcba4e1}\label{class_s_q_lite3_1_1_database_a1518fa0f6d3e31bb9f55d8c2fbcba4e1}} 
+{\bfseries Database} (const \mbox{\hyperlink{class_s_q_lite3_1_1_database}{Database}} \&) noexcept=default
+\item 
+\mbox{\Hypertarget{class_s_q_lite3_1_1_database_a83c94ac6c6c3298ef2af5f741263ade6}\label{class_s_q_lite3_1_1_database_a83c94ac6c6c3298ef2af5f741263ade6}} 
+\mbox{\hyperlink{class_s_q_lite3_1_1_database}{Database}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_s_q_lite3_1_1_database}{Database}} \&) noexcept=default
+\item 
+void \mbox{\hyperlink{class_s_q_lite3_1_1_database_a64b74e496ca2a8ef37e09a242c920573}{open}} (const std\+::string \&filename, int flags=S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+R\+E\+A\+D\+O\+N\+LY, const char $\ast$z\+Vfs=nullptr)
+\begin{DoxyCompactList}\small\item\em Open \mbox{\hyperlink{class_s_q_lite3_1_1_database}{Database}} (See Constructor database to information) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_q_lite3_1_1_database_aa2bcfeb30e8f77c9c7178fac941f6825}\label{class_s_q_lite3_1_1_database_aa2bcfeb30e8f77c9c7178fac941f6825}} 
+void \mbox{\hyperlink{class_s_q_lite3_1_1_database_aa2bcfeb30e8f77c9c7178fac941f6825}{close}} ()
+\begin{DoxyCompactList}\small\item\em Destructor object Close database. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_q_lite3_1_1_database_a59fc4682b5703a7edc93390831f7bc5f}{boost}} (size\+\_\+t memory\+Size=0) noexcept
+\begin{DoxyCompactList}\small\item\em Active Async on database and write the journal in memory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_q_lite3_1_1_database_add1a90c8ce487a42568aabd25a789560}{exec}} (const std\+::string \&sql)
+\begin{DoxyCompactList}\small\item\em Exec simple query request. \end{DoxyCompactList}\item 
+sqlite3 $\ast$ \mbox{\hyperlink{class_s_q_lite3_1_1_database_a01abb46c3cd817b78f5bbbef56e46162}{get\+Database\+Ptr}} () const
+\begin{DoxyCompactList}\small\item\em return the ptr on database \mbox{\hyperlink{namespace_s_q_lite3}{S\+Q\+Lite3}} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_s_q_lite3_1_1_database_a7eea0c07f87f467646f73445aeeda200}\label{class_s_q_lite3_1_1_database_a7eea0c07f87f467646f73445aeeda200}} 
+\index{SQLite3::Database@{SQLite3::Database}!Database@{Database}}
+\index{Database@{Database}!SQLite3::Database@{SQLite3::Database}}
+\doxysubsubsection{\texorpdfstring{Database()}{Database()}}
+{\footnotesize\ttfamily S\+Q\+Lite3\+::\+Database\+::\+Database (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{database,  }\item[{int}]{flags = {\ttfamily SQLITE\+\_\+OPEN\+\_\+READONLY},  }\item[{const char $\ast$}]{z\+Vfs = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Contructor \mbox{\hyperlink{class_s_q_lite3_1_1_database}{Database}} object with init database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em database} & path to the database \\
+\hline
+{\em flags} & Flags \mbox{\hyperlink{namespace_s_q_lite3}{S\+Q\+Lite3}} to open a new database (\href{https://www.sqlite.org/c3ref/open.html}{\texttt{ https\+://www.\+sqlite.\+org/c3ref/open.\+html}})
+\begin{DoxyItemize}
+\item S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+R\+E\+A\+D\+O\+N\+LY The database is opened in read-\/only mode. If the database does not already exist, an error is returned.
+\item S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+R\+E\+A\+D\+W\+R\+I\+T\+E/\+S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+R\+E\+A\+D\+W\+R\+I\+TE The database is opened for reading and writing if possible, or reading only if the file is write protected by the operating system. In either case the database must already exist, otherwise an error is returned.
+\item S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+C\+R\+E\+A\+TE The database is opened for reading and writing, and is created if it does not already exist. This is the behavior that is always used for sqlite3\+\_\+open() and sqlite3\+\_\+open16().
+\item S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+U\+RI The filename can be interpreted as a U\+RI if this flag is set.
+\item S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+M\+E\+M\+O\+RY The database will be opened as an in-\/memory database. The database is named by the \char`\"{}filename\char`\"{} argument for the purposes of cache-\/sharing, if shared cache mode is enabled, but the \char`\"{}filename\char`\"{} is otherwise ignored.
+\item S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+N\+O\+M\+U\+T\+EX The new database connection will use the \char`\"{}multi-\/thread\char`\"{} threading mode. This means that separate threads are allowed to use S\+Q\+Lite at the same time, as long as each thread is using a different database connection.
+\item S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+F\+U\+L\+L\+M\+U\+T\+EX The new database connection will use the \char`\"{}serialized\char`\"{} threading mode. This means the multiple threads can safely attempt to use the same database connection at the same time. (Mutexes will block any actual concurrency, but in this mode there is no harm in trying.)
+\item S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+S\+H\+A\+R\+E\+D\+C\+A\+C\+HE The database is opened shared cache enabled, overriding the default shared cache setting provided by sqlite3\+\_\+enable\+\_\+shared\+\_\+cache().
+\item S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+P\+R\+I\+V\+A\+T\+E\+C\+A\+C\+HE The database is opened shared cache disabled, overriding the default shared cache setting provided by sqlite3\+\_\+enable\+\_\+shared\+\_\+cache().
+\item S\+Q\+L\+I\+T\+E\+\_\+\+O\+P\+E\+N\+\_\+\+N\+O\+F\+O\+L\+L\+OW The database filename is not allowed to be a symbolic link 
+\end{DoxyItemize}\\
+\hline
+{\em z\+Vfs} & object that defines the operating system interface that the new database connection should use. If the fourth parameter is a N\+U\+LL pointer then the default sqlite3\+\_\+vfs object is used \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_q_lite3_1_1_database_a59fc4682b5703a7edc93390831f7bc5f}\label{class_s_q_lite3_1_1_database_a59fc4682b5703a7edc93390831f7bc5f}} 
+\index{SQLite3::Database@{SQLite3::Database}!boost@{boost}}
+\index{boost@{boost}!SQLite3::Database@{SQLite3::Database}}
+\doxysubsubsection{\texorpdfstring{boost()}{boost()}}
+{\footnotesize\ttfamily void S\+Q\+Lite3\+::\+Database\+::boost (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{memory\+Size = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Active Async on database and write the journal in memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em memory\+Size} & Change the memory size of the database \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_q_lite3_1_1_database_add1a90c8ce487a42568aabd25a789560}\label{class_s_q_lite3_1_1_database_add1a90c8ce487a42568aabd25a789560}} 
+\index{SQLite3::Database@{SQLite3::Database}!exec@{exec}}
+\index{exec@{exec}!SQLite3::Database@{SQLite3::Database}}
+\doxysubsubsection{\texorpdfstring{exec()}{exec()}}
+{\footnotesize\ttfamily void S\+Q\+Lite3\+::\+Database\+::exec (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{sql }\end{DoxyParamCaption})}
+
+
+
+Exec simple query request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sql} & query request \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_q_lite3_1_1_database_a01abb46c3cd817b78f5bbbef56e46162}\label{class_s_q_lite3_1_1_database_a01abb46c3cd817b78f5bbbef56e46162}} 
+\index{SQLite3::Database@{SQLite3::Database}!getDatabasePtr@{getDatabasePtr}}
+\index{getDatabasePtr@{getDatabasePtr}!SQLite3::Database@{SQLite3::Database}}
+\doxysubsubsection{\texorpdfstring{getDatabasePtr()}{getDatabasePtr()}}
+{\footnotesize\ttfamily sqlite3$\ast$ S\+Q\+Lite3\+::\+Database\+::get\+Database\+Ptr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+return the ptr on database \mbox{\hyperlink{namespace_s_q_lite3}{S\+Q\+Lite3}} 
+
+\begin{DoxyReturn}{Returns}
+sqlite3 $\ast$ptr 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite3_1_1_database_a64b74e496ca2a8ef37e09a242c920573}\label{class_s_q_lite3_1_1_database_a64b74e496ca2a8ef37e09a242c920573}} 
+\index{SQLite3::Database@{SQLite3::Database}!open@{open}}
+\index{open@{open}!SQLite3::Database@{SQLite3::Database}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily void S\+Q\+Lite3\+::\+Database\+::open (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{int}]{flags = {\ttfamily SQLITE\+\_\+OPEN\+\_\+READONLY},  }\item[{const char $\ast$}]{z\+Vfs = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Open \mbox{\hyperlink{class_s_q_lite3_1_1_database}{Database}} (See Constructor database to information) 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Alpaga/\+S\+Q\+Lite/Database.\+hpp\item 
+Alpaga/\+S\+Q\+Lite/Database.\+cpp\end{DoxyCompactItemize}

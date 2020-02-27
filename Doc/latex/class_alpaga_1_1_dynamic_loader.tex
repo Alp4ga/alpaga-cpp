@@ -1,0 +1,47 @@
+\hypertarget{class_alpaga_1_1_dynamic_loader}{}\doxysection{Alpaga\+::Dynamic\+Loader Class Reference}
+\label{class_alpaga_1_1_dynamic_loader}\index{Alpaga::DynamicLoader@{Alpaga::DynamicLoader}}
+
+
+Load shared cross plateforme library.  
+
+
+
+
+{\ttfamily \#include $<$Dynamic\+Loader.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_alpaga_1_1_dynamic_loader_ad8714b390e7f4101c623fe2258e71713}\label{class_alpaga_1_1_dynamic_loader_ad8714b390e7f4101c623fe2258e71713}} 
+\mbox{\hyperlink{class_alpaga_1_1_dynamic_loader_ad8714b390e7f4101c623fe2258e71713}{Dynamic\+Loader}} (void)=default
+\begin{DoxyCompactList}\small\item\em Construct a new Dynamic Loader object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_dynamic_loader_a48b8658929c54dbb03a79f752d2fc131}\label{class_alpaga_1_1_dynamic_loader_a48b8658929c54dbb03a79f752d2fc131}} 
+\mbox{\hyperlink{class_alpaga_1_1_dynamic_loader_a48b8658929c54dbb03a79f752d2fc131}{$\sim$\+Dynamic\+Loader}} (void)
+\begin{DoxyCompactList}\small\item\em Destroy the Dynamic Loader object and release its content. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_dynamic_loader_a1a0201ebc77bdd744aa528d7cb999a89}\label{class_alpaga_1_1_dynamic_loader_a1a0201ebc77bdd744aa528d7cb999a89}} 
+Dynamic\+Handler \mbox{\hyperlink{class_alpaga_1_1_dynamic_loader_a1a0201ebc77bdd744aa528d7cb999a89}{load}} (const std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Load a dynamic library. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_dynamic_loader_a136f9d35245f4e3d556d7f4eae951cdf}\label{class_alpaga_1_1_dynamic_loader_a136f9d35245f4e3d556d7f4eae951cdf}} 
+void $\ast$ \mbox{\hyperlink{class_alpaga_1_1_dynamic_loader_a136f9d35245f4e3d556d7f4eae951cdf}{get\+Function}} (Dynamic\+Handler handler, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Get a function of handler library, returning opaque pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_dynamic_loader_a9c0f53f123d13deb2cb6eba5e822299c}\label{class_alpaga_1_1_dynamic_loader_a9c0f53f123d13deb2cb6eba5e822299c}} 
+{\footnotesize template$<$typename Signature $>$ }\\Signature \mbox{\hyperlink{class_alpaga_1_1_dynamic_loader_a9c0f53f123d13deb2cb6eba5e822299c}{get\+Function}} (Dynamic\+Handler handler, const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Get a function of handler library, returning custom Signature. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_dynamic_loader_a405559cdad1b8eba0bd3bee22fa764f9}\label{class_alpaga_1_1_dynamic_loader_a405559cdad1b8eba0bd3bee22fa764f9}} 
+void \mbox{\hyperlink{class_alpaga_1_1_dynamic_loader_a405559cdad1b8eba0bd3bee22fa764f9}{release}} (void)
+\begin{DoxyCompactList}\small\item\em Release loaded libraries. Call this function after every instances aquired from libraries are destroyed. If you destroy instances after, the virtual destructor will be unloaded and your program will crash. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_dynamic_loader_ae822f62c912bfdc978188d22e45798ff}\label{class_alpaga_1_1_dynamic_loader_ae822f62c912bfdc978188d22e45798ff}} 
+std\+::string \mbox{\hyperlink{class_alpaga_1_1_dynamic_loader_ae822f62c912bfdc978188d22e45798ff}{get\+Last\+Error}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Get the last error as string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_dynamic_loader_a732fb1a8c82a4caa1a5e3a227b9d32ab}\label{class_alpaga_1_1_dynamic_loader_a732fb1a8c82a4caa1a5e3a227b9d32ab}} 
+std\+::string \mbox{\hyperlink{class_alpaga_1_1_dynamic_loader_a732fb1a8c82a4caa1a5e3a227b9d32ab}{get\+Handler\+Path}} (const Dynamic\+Handler handler) const noexcept
+\begin{DoxyCompactList}\small\item\em Get the name of a handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Load shared cross plateforme library. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Alpaga/\+Dynamic\+Loader/Dynamic\+Loader.\+hpp\item 
+Alpaga/\+Dynamic\+Loader/Dynamic\+Loader.\+cpp\end{DoxyCompactItemize}

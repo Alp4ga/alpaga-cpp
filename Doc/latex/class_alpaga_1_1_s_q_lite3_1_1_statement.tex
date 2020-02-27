@@ -1,0 +1,180 @@
+\hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement}{}\doxysection{Alpaga\+::S\+Q\+Lite3\+::Statement Class Reference}
+\label{class_alpaga_1_1_s_q_lite3_1_1_statement}\index{Alpaga::SQLite3::Statement@{Alpaga::SQLite3::Statement}}
+
+
+Generate a statement for sqlite3.  
+
+
+
+
+{\ttfamily \#include $<$Statement.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_a8764b6fe695ca4de2809ce99358421e7}{Statement}} (\mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database}{S\+Q\+Lite3\+::\+Database}} \&db, const std\+::string \&statement)
+\begin{DoxyCompactList}\small\item\em Build new \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement}{Statement}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_af8207d75df74e4f08299d911c60effe9}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_af8207d75df74e4f08299d911c60effe9}} 
+\mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_af8207d75df74e4f08299d911c60effe9}{$\sim$\+Statement}} () noexcept
+\begin{DoxyCompactList}\small\item\em Destructor class \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement}{Statement}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_a557e8e7544e9c02ebcdd183fc7da2af2}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_a557e8e7544e9c02ebcdd183fc7da2af2}} 
+\mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_a557e8e7544e9c02ebcdd183fc7da2af2}{Statement}} (const \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement}{Statement}} \&) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default copy constructor class \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement}{Statement}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_a3792d1110260b08e4a1f9f9d6a66dfbb}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_a3792d1110260b08e4a1f9f9d6a66dfbb}} 
+\mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement}{Statement}} \& \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_a3792d1110260b08e4a1f9f9d6a66dfbb}{operator=}} (const \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement}{Statement}} \&) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default operator= class \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement}{Statement}}. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_addf84eb953131f1ea86fb58dc3d714cd}{bind}} (int pos, T value)
+\begin{DoxyCompactList}\small\item\em Bind argument to statement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_a8a0da2d23be8ce5a3c1b562bb9c6bb42}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_a8a0da2d23be8ce5a3c1b562bb9c6bb42}} 
+template$<$$>$ void {\bfseries bind} (int pos, const char $\ast$value) noexcept
+\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_aaa441ff74363980d4e218e1354f3eba5}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_aaa441ff74363980d4e218e1354f3eba5}} 
+template$<$$>$ void {\bfseries bind} (int pos, char $\ast$value) noexcept
+\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_a46ef4a4e387e6811f8f79f4a7b948560}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_a46ef4a4e387e6811f8f79f4a7b948560}} 
+template$<$$>$ void {\bfseries bind} (int pos, char value) noexcept
+\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_ad688054981d462aac43d71fa9be1150d}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_ad688054981d462aac43d71fa9be1150d}} 
+template$<$$>$ void {\bfseries bind} (int pos, int value) noexcept
+\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_a351395af2f84fdfcbbf59b70fdf92f82}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_a351395af2f84fdfcbbf59b70fdf92f82}} 
+template$<$$>$ void {\bfseries bind} (int pos, unsigned int value) noexcept
+\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_a2c3c08eaa461f02f5409784608b17339}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_a2c3c08eaa461f02f5409784608b17339}} 
+template$<$$>$ void {\bfseries bind} (int pos, double value) noexcept
+\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_acbfabf8d0a075f635dc9730513459879}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_acbfabf8d0a075f635dc9730513459879}} 
+template$<$$>$ void {\bfseries bind} (int pos, bool value) noexcept
+\item 
+{\footnotesize template$<$typename T , typename... Args$>$ }\\void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_abbd18dff43c8bd97fc51d09dbc29edbf}{bind}} (int start, T first, Args... args)
+\begin{DoxyCompactList}\small\item\em Bind agrument to the statement. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_a94df08bc920b6692107c006adf2dfc4c}{column}} (int pos)
+\begin{DoxyCompactList}\small\item\em Get column value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_a3679d63526ab7357420824f15eb3aca3}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_a3679d63526ab7357420824f15eb3aca3}} 
+template$<$$>$ int \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_a3679d63526ab7357420824f15eb3aca3}{column}} (int pos)
+\begin{DoxyCompactList}\small\item\em Get type\+: int. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_ad2ca1ae05d5bfbb9334d0b01b14c7131}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_ad2ca1ae05d5bfbb9334d0b01b14c7131}} 
+template$<$$>$ unsigned int \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_ad2ca1ae05d5bfbb9334d0b01b14c7131}{column}} (int pos)
+\begin{DoxyCompactList}\small\item\em Get type\+: unsigned int. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_a3f87df2e4025d0e7476cfa4c1e9c4681}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_a3f87df2e4025d0e7476cfa4c1e9c4681}} 
+template$<$$>$ char \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_a3f87df2e4025d0e7476cfa4c1e9c4681}{column}} (int pos)
+\begin{DoxyCompactList}\small\item\em Get type\+: char. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_a5251120b03c30421360a9a7fb75f63b2}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_a5251120b03c30421360a9a7fb75f63b2}} 
+template$<$$>$ bool \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_a5251120b03c30421360a9a7fb75f63b2}{column}} (int pos)
+\begin{DoxyCompactList}\small\item\em Get type\+: bool. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_af532aa99c433d57cdc8d4e06c4cdfc91}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_af532aa99c433d57cdc8d4e06c4cdfc91}} 
+template$<$$>$ double \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_af532aa99c433d57cdc8d4e06c4cdfc91}{column}} (int pos)
+\begin{DoxyCompactList}\small\item\em Get type\+: double. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_af2cf2b26eb0f2d942e383de6ecc65593}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_af2cf2b26eb0f2d942e383de6ecc65593}} 
+template$<$$>$ std\+::string \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_af2cf2b26eb0f2d942e383de6ecc65593}{column}} (int pos)
+\begin{DoxyCompactList}\small\item\em Get type\+: std\+::string. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_ac267d89170423bac36bee05ea33425ad}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_ac267d89170423bac36bee05ea33425ad}} 
+template$<$$>$ const char $\ast$ \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_ac267d89170423bac36bee05ea33425ad}{column}} (int pos)
+\begin{DoxyCompactList}\small\item\em Get type\+: const char $\ast$. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_aae64dce42c58c778cbe0b8c0cee4c6f6}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_aae64dce42c58c778cbe0b8c0cee4c6f6}} 
+bool \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_aae64dce42c58c778cbe0b8c0cee4c6f6}{step}} () noexcept
+\begin{DoxyCompactList}\small\item\em Execute statement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_a09d22e00cfaa5feeb4a24dd20a58b9d4}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_a09d22e00cfaa5feeb4a24dd20a58b9d4}} 
+void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_a09d22e00cfaa5feeb4a24dd20a58b9d4}{clear}} ()
+\begin{DoxyCompactList}\small\item\em clear binding \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_af7f704834674762c91a59251aea7b0be}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_af7f704834674762c91a59251aea7b0be}} 
+void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_af7f704834674762c91a59251aea7b0be}{reset}} () noexcept
+\begin{DoxyCompactList}\small\item\em Reset statement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_a9b15afc355d91a8f5f557f77edac6be3}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_a9b15afc355d91a8f5f557f77edac6be3}} 
+void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_a9b15afc355d91a8f5f557f77edac6be3}{step\+And\+Clean}} ()
+\begin{DoxyCompactList}\small\item\em Call function 1. Step() 2. Clear() 3. Reset() \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generate a statement for sqlite3. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_a8764b6fe695ca4de2809ce99358421e7}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_a8764b6fe695ca4de2809ce99358421e7}} 
+\index{Alpaga::SQLite3::Statement@{Alpaga::SQLite3::Statement}!Statement@{Statement}}
+\index{Statement@{Statement}!Alpaga::SQLite3::Statement@{Alpaga::SQLite3::Statement}}
+\doxysubsubsection{\texorpdfstring{Statement()}{Statement()}}
+{\footnotesize\ttfamily Alpaga\+::\+S\+Q\+Lite3\+::\+Statement\+::\+Statement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database}{S\+Q\+Lite3\+::\+Database}} \&}]{db,  }\item[{const std\+::string \&}]{statement }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Build new \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement}{Statement}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database}{Database}} \mbox{\hyperlink{namespace_s_q_lite3}{S\+Q\+Lite3}} \\
+\hline
+{\em statement} & Query request (S\+E\+L\+E\+CT $\ast$ F\+R\+OM Example) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_addf84eb953131f1ea86fb58dc3d714cd}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_addf84eb953131f1ea86fb58dc3d714cd}} 
+\index{Alpaga::SQLite3::Statement@{Alpaga::SQLite3::Statement}!bind@{bind}}
+\index{bind@{bind}!Alpaga::SQLite3::Statement@{Alpaga::SQLite3::Statement}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Alpaga\+::\+S\+Q\+Lite3\+::\+Statement\+::bind (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Bind argument to statement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Postion of the argument in query \\
+\hline
+{\em value} & Value of argument\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_abbd18dff43c8bd97fc51d09dbc29edbf}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_abbd18dff43c8bd97fc51d09dbc29edbf}} 
+\index{Alpaga::SQLite3::Statement@{Alpaga::SQLite3::Statement}!bind@{bind}}
+\index{bind@{bind}!Alpaga::SQLite3::Statement@{Alpaga::SQLite3::Statement}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename... Args$>$ \\
+void Alpaga\+::\+S\+Q\+Lite3\+::\+Statement\+::bind (\begin{DoxyParamCaption}\item[{int}]{start,  }\item[{T}]{first,  }\item[{Args...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Bind agrument to the statement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em start} & postion of the first statement \\
+\hline
+{\em first} & First arguement \\
+\hline
+{\em args} & Unlimited number of argument to bind\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_a94df08bc920b6692107c006adf2dfc4c}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_a94df08bc920b6692107c006adf2dfc4c}} 
+\index{Alpaga::SQLite3::Statement@{Alpaga::SQLite3::Statement}!column@{column}}
+\index{column@{column}!Alpaga::SQLite3::Statement@{Alpaga::SQLite3::Statement}}
+\doxysubsubsection{\texorpdfstring{column()}{column()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T Alpaga\+::\+S\+Q\+Lite3\+::\+Statement\+::column (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Get column value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Position of the column start 1 not 0 !!!!\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Template type 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Alpaga/\+S\+Q\+Lite/Statement.\+hpp\item 
+Alpaga/\+S\+Q\+Lite/Statement.\+cpp\end{DoxyCompactItemize}

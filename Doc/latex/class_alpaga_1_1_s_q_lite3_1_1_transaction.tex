@@ -1,0 +1,64 @@
+\hypertarget{class_alpaga_1_1_s_q_lite3_1_1_transaction}{}\doxysection{Alpaga\+::S\+Q\+Lite3\+::Transaction Class Reference}
+\label{class_alpaga_1_1_s_q_lite3_1_1_transaction}\index{Alpaga::SQLite3::Transaction@{Alpaga::SQLite3::Transaction}}
+
+
+Handle transaction with the database.  
+
+
+
+
+{\ttfamily \#include $<$Transaction.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_transaction_aa320bc0475fecd8045655bb20f217686}{Transaction}} (\mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database}{S\+Q\+Lite3\+::\+Database}} \&db)
+\begin{DoxyCompactList}\small\item\em Build new class \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_transaction}{Transaction}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_transaction_af8ce52eb378695a8a4737b43774ba8a2}\label{class_alpaga_1_1_s_q_lite3_1_1_transaction_af8ce52eb378695a8a4737b43774ba8a2}} 
+\mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_transaction_af8ce52eb378695a8a4737b43774ba8a2}{$\sim$\+Transaction}} () noexcept=default
+\begin{DoxyCompactList}\small\item\em Default descructor class \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_transaction}{Transaction}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_transaction_a998d663df57449ec07dcf3802f8adbdf}\label{class_alpaga_1_1_s_q_lite3_1_1_transaction_a998d663df57449ec07dcf3802f8adbdf}} 
+\mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_transaction_a998d663df57449ec07dcf3802f8adbdf}{Transaction}} (const \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_transaction}{Transaction}} \&) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default copy constructor class \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_transaction}{Transaction}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_transaction_a097844edb4adbc8f63587fe908f91634}\label{class_alpaga_1_1_s_q_lite3_1_1_transaction_a097844edb4adbc8f63587fe908f91634}} 
+\mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_transaction}{Transaction}} \& \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_transaction_a097844edb4adbc8f63587fe908f91634}{operator=}} (const \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_transaction}{Transaction}} \&) noexcept=default
+\begin{DoxyCompactList}\small\item\em Default operator= class \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_transaction}{Transaction}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_transaction_a64b15a7f10a37c60edef8031931ca3ce}\label{class_alpaga_1_1_s_q_lite3_1_1_transaction_a64b15a7f10a37c60edef8031931ca3ce}} 
+void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_transaction_a64b15a7f10a37c60edef8031931ca3ce}{begin}} ()
+\begin{DoxyCompactList}\small\item\em Start the transaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_transaction_ae46582d24737d1fe144e819c0913c2ea}\label{class_alpaga_1_1_s_q_lite3_1_1_transaction_ae46582d24737d1fe144e819c0913c2ea}} 
+void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_transaction_ae46582d24737d1fe144e819c0913c2ea}{end}} ()
+\begin{DoxyCompactList}\small\item\em Finish the transaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_transaction_a99178419940e4521b1dce1b3252e4c76}\label{class_alpaga_1_1_s_q_lite3_1_1_transaction_a99178419940e4521b1dce1b3252e4c76}} 
+void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_transaction_a99178419940e4521b1dce1b3252e4c76}{commit}} ()
+\begin{DoxyCompactList}\small\item\em Execute transaction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_transaction_ab4cfbf9cdb4538cd7ecb57e4aee92737}\label{class_alpaga_1_1_s_q_lite3_1_1_transaction_ab4cfbf9cdb4538cd7ecb57e4aee92737}} 
+void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_transaction_ab4cfbf9cdb4538cd7ecb57e4aee92737}{rollback}} ()
+\begin{DoxyCompactList}\small\item\em Remove the last transaction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handle transaction with the database. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_transaction_aa320bc0475fecd8045655bb20f217686}\label{class_alpaga_1_1_s_q_lite3_1_1_transaction_aa320bc0475fecd8045655bb20f217686}} 
+\index{Alpaga::SQLite3::Transaction@{Alpaga::SQLite3::Transaction}!Transaction@{Transaction}}
+\index{Transaction@{Transaction}!Alpaga::SQLite3::Transaction@{Alpaga::SQLite3::Transaction}}
+\doxysubsubsection{\texorpdfstring{Transaction()}{Transaction()}}
+{\footnotesize\ttfamily Alpaga\+::\+S\+Q\+Lite3\+::\+Transaction\+::\+Transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_database}{S\+Q\+Lite3\+::\+Database}} \&}]{db }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Build new class \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_transaction}{Transaction}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db} & \mbox{\hyperlink{namespace_s_q_lite3}{S\+Q\+Lite3}} database \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Alpaga/\+S\+Q\+Lite/Transaction.\+hpp\item 
+Alpaga/\+S\+Q\+Lite/Transaction.\+cpp\end{DoxyCompactItemize}
