@@ -1,8 +1,8 @@
 /*
-** EPITECH PROJECT, 2020
-** openZia
-** File description:
-** DynamicLoader
+  * @Author: Alpaga
+  * @Date: 2020-02-28 10:34:26
+  * @Last Modified by:   Alpaga
+  * @Last Modified time: 2020-02-28 10:34:26
 */
 
 #pragma once
