@@ -2,7 +2,7 @@
   * @Author: Alpaga
   * @Date: 2019-10-03 16:22:02
  * @Last Modified by: Alpaga
- * @Last Modified time: 2020-01-30 15:41:00
+ * @Last Modified time: 2020-02-28 10:53:12
 */
 
 #pragma once
@@ -65,7 +65,7 @@ class Alpaga::FileWatcher {
 		/*! @brief Starting to watch
 		 * @param action Callback when a new event is coming 
 		*/
-	     void lunch(const std::function<FileAction(const std::string &, FileStatus)> &action) {
+	    void lunch(const std::function<FileAction(const std::string &, FileStatus)> &action) {
 			bool firstRound = true;
 			while(_running == FileAction::Continue) {
 				for (const auto &[file, type] : _paths) {

@@ -2,7 +2,7 @@
   * @Author: Alpaga
   * @Date: 2020-02-28 10:33:28
  * @Last Modified by: Alpaga
- * @Last Modified time: 2020-02-28 10:44:01
+ * @Last Modified time: 2020-02-28 10:53:02
 */
 
 #pragma once
@@ -64,6 +64,6 @@ namespace Alpaga {
 				std::stringstream ss(str);
 				return std::distance(std::istream_iterator<std::string>(ss), std::istream_iterator<std::string>());
 			}
-		}
-	}
-}
+		};
+	};
+};
