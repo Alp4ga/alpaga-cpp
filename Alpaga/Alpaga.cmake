@@ -28,6 +28,6 @@ set(AlpagaSources
 )
 
 add_library(${PROJECT_NAME} STATIC ${AlpagaSources} )
-target_link_libraries(${PROJECT_NAME} PUBLIC CONAN_PKG::sqlite3)
+target_link_libraries(${PROJECT_NAME} PUBLIC CONAN_PKG::sqlite3 CONAN_PKG::boost)
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY POSITION_INDEPENDENT_CODE ON)

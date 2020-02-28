@@ -2,7 +2,7 @@
   * @Author: Alpaga
   * @Date: 2020-01-03 12:51:48
  * @Last Modified by: Alpaga
- * @Last Modified time: 2020-02-28 10:34:04
+ * @Last Modified time: 2020-02-28 12:14:54
 */
 
 #pragma once
@@ -137,9 +137,16 @@ class Alpaga::SQLite3::Statement {
 		*/
 		void stepAndClean();
 
+	public:
+		/*!
+		 * @brief Get stmt
+		 * @return Pointer to the current statement
+		*/
+		sqlite3_stmt *getStmt();
+
 	private:
 		/*!
-		 * @brief Pointer to the statement
+		 * @brief Pointer to the current statement
 		*/
 		sqlite3_stmt *_stmt;
 };

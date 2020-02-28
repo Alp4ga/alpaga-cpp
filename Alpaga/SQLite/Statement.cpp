@@ -2,7 +2,7 @@
   * @Author: Alpaga
   * @Date: 2020-01-03 12:53:39
  * @Last Modified by: Alpaga
- * @Last Modified time: 2020-02-28 10:34:00
+ * @Last Modified time: 2020-02-28 12:15:02
 */
 
 #include <stdexcept>
@@ -35,4 +35,8 @@ void Alpaga::SQLite3::Statement::stepAndClean() {
 	this->step();
 	this->clear();
 	this->reset();
+}
+
+sqlite3_stmt *Alpaga::SQLite3::Statement::getStmt() {
+	return _stmt;
 }
