@@ -65,7 +65,11 @@ class Alpaga::FileWatcher {
 		/*! @brief Starting to watch
 		 * @param action Callback when a new event is coming 
 		*/
+<<<<<<< HEAD
 	    void lunch(const std::function<FileAction(const std::string &, FileStatus)> &action) {
+=======
+	     void lunch(const std::function<FileAction(const std::string &, FileStatus)> &action) {
+>>>>>>> 268ce59c562c2f0572b720364d7084b43850f101
 			bool firstRound = true;
 			while(_running == FileAction::Continue) {
 				for (const auto &[file, type] : _paths) {

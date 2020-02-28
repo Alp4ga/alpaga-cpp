@@ -23,6 +23,8 @@ set(AlpagaSources
 	${AlpagaSourcesDir}/Thread/ThreadPool.hpp
 
 	${AlpagaSourcesDir}/FileWatcher/FileWatcher.hpp
+
+	${AlpagaSourcesDir}/Utils/Str.hpp
 )
 
 add_library(${PROJECT_NAME} STATIC ${AlpagaSources} )

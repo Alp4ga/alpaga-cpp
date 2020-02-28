@@ -109,51 +109,42 @@ $(function() {
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="class_alpaga_1_1_file_watcher.html#a475eea7f34b0bc9150786511ddf33cc8">~FileWatcher</a>() noexcept = default;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    public:</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_alpaga_1_1_file_watcher.html#a535c03e02f1ef0b7cd7cb6633a85235f">   68</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_alpaga_1_1_file_watcher.html#a535c03e02f1ef0b7cd7cb6633a85235f">lunch</a>(const std::function&lt;<a class="code" href="class_alpaga_1_1_file_watcher.html#a2115618c5966f3ce43d929608edbe683">FileAction</a>(const std::<span class="keywordtype">string</span> &amp;, <a class="code" href="class_alpaga_1_1_file_watcher.html#a770c3395f0cd6352341d6b72085bcb91">FileStatus</a>)&gt; &amp;action) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordtype">bool</span> first = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_alpaga_1_1_file_watcher.html#a535c03e02f1ef0b7cd7cb6633a85235f">   68</a></span>&#160;         <span class="keywordtype">void</span> <a class="code" href="class_alpaga_1_1_file_watcher.html#a535c03e02f1ef0b7cd7cb6633a85235f">lunch</a>(const std::function&lt;<a class="code" href="class_alpaga_1_1_file_watcher.html#a2115618c5966f3ce43d929608edbe683">FileAction</a>(const std::<span class="keywordtype">string</span> &amp;, <a class="code" href="class_alpaga_1_1_file_watcher.html#a770c3395f0cd6352341d6b72085bcb91">FileStatus</a>)&gt; &amp;action) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordtype">bool</span> firstRound = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">while</span>(_running == FileAction::Continue) {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keyword">auto</span> it = _paths.begin();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordflow">while</span> (it != _paths.end()) {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    <span class="keywordflow">if</span> (!std::filesystem::exists(it-&gt;first)) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                        _running = action(it-&gt;first, FileStatus::erased);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                        it = _paths.erase(it);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                        <span class="keywordflow">if</span> (first)</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                            _running =  action(it-&gt;first, FileStatus::in);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                        it++;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    }                    </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <span class="keywordflow">if</span> (first)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    first = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;file : std::filesystem::recursive_directory_iterator(_pathToWatch)) {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    <span class="keyword">const</span> <span class="keyword">auto</span> current_file_last_write_time = std::filesystem::last_write_time(file);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    <span class="keywordflow">if</span>(!contains(file.path().string())) {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                        _paths[file.path().string()] = current_file_last_write_time;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                        _running = action(file.path().string(), FileStatus::created);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                        <span class="keywordflow">if</span>(_paths[file.path().string()] != current_file_last_write_time) {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                            _paths[file.path().string()] = current_file_last_write_time;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                            _running =  action(file.path().string(), FileStatus::modified);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                        }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                std::this_thread::sleep_for(_delay);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordtype">bool</span> contains(<span class="keyword">const</span> std::string &amp;key) {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <span class="keyword">auto</span> el = _paths.find(key);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            <span class="keywordflow">return</span> el != _paths.end();</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        std::string _pathToWatch;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        std::chrono::duration&lt;int, std::milli&gt; _delay;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        std::unordered_map&lt;std::string, std::filesystem::file_time_type&gt; _paths;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="class_alpaga_1_1_file_watcher.html#a2115618c5966f3ce43d929608edbe683">FileAction</a> _running = FileAction::Continue;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;};</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;[file, type] : _paths) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    <span class="keywordflow">if</span> (!std::filesystem::exists(file)) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                        _running = action(file, FileStatus::erased);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                         _paths.erase(file);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (firstRound) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                        _running =  action(file, FileStatus::in);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="keywordflow">if</span> (firstRound)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    firstRound = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">const</span> <span class="keyword">auto</span> &amp;file : std::filesystem::recursive_directory_iterator(_pathToWatch)) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    <span class="keyword">const</span> <span class="keyword">auto</span> current_file_last_write_time = std::filesystem::last_write_time(file);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    <span class="keywordflow">if</span>(_paths.find(file.path().string()) == _paths.end()) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                        _paths[file.path().string()] = current_file_last_write_time;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                        _running = action(file.path().string(), FileStatus::created);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                        <span class="keywordflow">if</span>(_paths[file.path().string()] != current_file_last_write_time) {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                            _paths[file.path().string()] = current_file_last_write_time;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                            _running =  action(file.path().string(), FileStatus::modified);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                        }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                std::this_thread::sleep_for(_delay);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        std::string _pathToWatch;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        std::chrono::duration&lt;int, std::milli&gt; _delay;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        std::unordered_map&lt;std::string, std::filesystem::file_time_type&gt; _paths;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="class_alpaga_1_1_file_watcher.html#a2115618c5966f3ce43d929608edbe683">FileAction</a> _running = FileAction::Continue;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_alpaga_1_1_file_watcher_html"><div class="ttname"><a href="class_alpaga_1_1_file_watcher.html">Alpaga::FileWatcher</a></div><div class="ttdoc">Handle action in directory Can detect if file is in, created, modified or erased.</div><div class="ttdef"><b>Definition:</b> FileWatcher.hpp:28</div></div>
 <div class="ttc" id="aclass_alpaga_1_1_file_watcher_html_aecc9bbaeed4547fea749176bed87fad0"><div class="ttname"><a href="class_alpaga_1_1_file_watcher.html#aecc9bbaeed4547fea749176bed87fad0">Alpaga::FileWatcher::operator=</a></div><div class="ttdeci">FileWatcher &amp; operator=(const FileWatcher &amp;) noexcept=default</div><div class="ttdoc">Default operator= class FileWatcher.</div></div>
