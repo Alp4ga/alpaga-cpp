@@ -70,7 +70,7 @@ class Alpaga::SQLite3::Statement {
 		template<> void bind<bool>(int pos, bool value) noexcept { sqlite3_bind_int(_stmt, pos, value); }
 		/*! @brief Bind agrument to the statement
 		 *
-		 * @param start postion of the first statement
+		 * @param start postion of the first statement starting att 1
 		 * @param first First arguement 
 		 * @param args Unlimited number of argument to bind
 		 *
@@ -85,7 +85,7 @@ class Alpaga::SQLite3::Statement {
 	public:
 		/*! @brief Get column value
 		 *
-		 * @param pos Position of the column start 1 not 0 !!!!
+		 * @param pos Position of the column starting at 0
 		 *
 		 * @return Template type
 		*/
