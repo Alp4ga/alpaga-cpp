@@ -25,6 +25,7 @@ set(AlpagaSources
 	${AlpagaSourcesDir}/FileWatcher/FileWatcher.hpp
 
 	${AlpagaSourcesDir}/Utils/Str.hpp
+	${AlpagaSourcesDir}/Utils/StringConvertor.hpp
 )
 
 add_library(${PROJECT_NAME} STATIC ${AlpagaSources} )
