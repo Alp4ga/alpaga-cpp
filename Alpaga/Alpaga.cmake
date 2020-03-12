@@ -4,6 +4,20 @@ project(Alpaga)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED 17 ON)
 
+if(NOT EXISTS "${CMAKE_BINARY_DIR}/conan.cmake")
+   message(STATUS "Downloading conan.cmake from https://github.com/conan-io/cmake-conan")
+   file(DOWNLOAD "https://raw.githubusercontent.com/conan-io/cmake-conan/master/conan.cmake"
+                  "${CMAKE_BINARY_DIR}/conan.cmake")
+endif()
+
+include(${CMAKE_BINARY_DIR}/conan.cmake)
+
+conan_cmake_run(REQUIRES 
+	sqlite3/3.29.0@bincrafters/stable
+	boost/1.71.0@conan/stable
+    BASIC_SETUP
+)
+
 get_filename_component(AlpagaSourcesDir ${CMAKE_CURRENT_LIST_FILE} PATH)
 
 set(AlpagaIncludes ${AlpagaSourcesDir}/..)
@@ -29,6 +43,6 @@ set(AlpagaSources
 )
 
 add_library(${PROJECT_NAME} STATIC ${AlpagaSources} )
-target_link_libraries(${PROJECT_NAME} PUBLIC CONAN_PKG::sqlite3 CONAN_PKG::boost)
+target_link_libraries(${PROJECT_NAME} PUBLIC ${CONAN_LIBS_RELEASE})
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY POSITION_INDEPENDENT_CODE ON)
