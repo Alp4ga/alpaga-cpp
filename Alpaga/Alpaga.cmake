@@ -40,6 +40,16 @@ set(AlpagaSources
 
 	${AlpagaSourcesDir}/Utils/Str.hpp
 	${AlpagaSourcesDir}/Utils/StringConvertor.hpp
+
+	${AlpagaSourcesDir}/Distance/JaroWinkler.cpp
+	${AlpagaSourcesDir}/Distance/JaroWinkler.hpp
+	${AlpagaSourcesDir}/Distance/Ratclikff.cpp
+	${AlpagaSourcesDir}/Distance/Ratclikff.hpp
+	${AlpagaSourcesDir}/Distance/Distance.cpp
+	${AlpagaSourcesDir}/Distance/Distance.hpp
+
+	${AlpagaSourcesDir}/Time/Chrono.cpp
+	${AlpagaSourcesDir}/Time/Chrono.hpp
 )
 
 add_library(${PROJECT_NAME} STATIC ${AlpagaSources} )

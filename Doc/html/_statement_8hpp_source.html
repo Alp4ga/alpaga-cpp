@@ -76,7 +76,7 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">  * @Author: Alpaga</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">  * @Date: 2020-01-03 12:51:48</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * @Last Modified by: Alpaga</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * @Last Modified time: 2020-02-28 10:34:04</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * @Last Modified time: 2020-02-28 12:14:54</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">*/</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
@@ -133,9 +133,12 @@ $(function() {
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_alpaga_1_1_s_q_lite3_1_1_statement.html#af7f704834674762c91a59251aea7b0be">reset</a>() noexcept;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_alpaga_1_1_s_q_lite3_1_1_statement.html#a9b15afc355d91a8f5f557f77edac6be3">stepAndClean</a>();</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    private:</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        sqlite3_stmt *_stmt;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;};</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    public:</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        sqlite3_stmt *<a class="code" href="class_alpaga_1_1_s_q_lite3_1_1_statement.html#afe6431d4f0579413cc08c667c347eaf5">getStmt</a>();</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    private:</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        sqlite3_stmt *_stmt;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_alpaga_1_1_s_q_lite3_1_1_statement_html"><div class="ttname"><a href="class_alpaga_1_1_s_q_lite3_1_1_statement.html">Alpaga::SQLite3::Statement</a></div><div class="ttdoc">Generate a statement for sqlite3.</div><div class="ttdef"><b>Definition:</b> Statement.hpp:33</div></div>
 <div class="ttc" id="aclass_alpaga_1_1_s_q_lite3_1_1_statement_html_a94df08bc920b6692107c006adf2dfc4c"><div class="ttname"><a href="class_alpaga_1_1_s_q_lite3_1_1_statement.html#a94df08bc920b6692107c006adf2dfc4c">Alpaga::SQLite3::Statement::column</a></div><div class="ttdeci">T column(int pos)</div><div class="ttdoc">Get column value.</div><div class="ttdef"><b>Definition:</b> Statement.hpp:92</div></div>
@@ -144,6 +147,7 @@ $(function() {
 <div class="ttc" id="aclass_alpaga_1_1_s_q_lite3_1_1_database_html"><div class="ttname"><a href="class_alpaga_1_1_s_q_lite3_1_1_database.html">Alpaga::SQLite3::Database</a></div><div class="ttdoc">Handle database management.</div><div class="ttdef"><b>Definition:</b> Database.hpp:29</div></div>
 <div class="ttc" id="anamespace_s_q_lite3_html"><div class="ttname"><a href="namespace_s_q_lite3.html">SQLite3</a></div><div class="ttdoc">Include all files for lib SQLite3.</div></div>
 <div class="ttc" id="aclass_alpaga_1_1_s_q_lite3_1_1_statement_html_aae64dce42c58c778cbe0b8c0cee4c6f6"><div class="ttname"><a href="class_alpaga_1_1_s_q_lite3_1_1_statement.html#aae64dce42c58c778cbe0b8c0cee4c6f6">Alpaga::SQLite3::Statement::step</a></div><div class="ttdeci">bool step() noexcept</div><div class="ttdoc">Execute statement.</div><div class="ttdef"><b>Definition:</b> Statement.cpp:21</div></div>
+<div class="ttc" id="aclass_alpaga_1_1_s_q_lite3_1_1_statement_html_afe6431d4f0579413cc08c667c347eaf5"><div class="ttname"><a href="class_alpaga_1_1_s_q_lite3_1_1_statement.html#afe6431d4f0579413cc08c667c347eaf5">Alpaga::SQLite3::Statement::getStmt</a></div><div class="ttdeci">sqlite3_stmt * getStmt()</div><div class="ttdoc">Get stmt.</div><div class="ttdef"><b>Definition:</b> Statement.cpp:40</div></div>
 <div class="ttc" id="aclass_alpaga_1_1_s_q_lite3_1_1_statement_html_af7f704834674762c91a59251aea7b0be"><div class="ttname"><a href="class_alpaga_1_1_s_q_lite3_1_1_statement.html#af7f704834674762c91a59251aea7b0be">Alpaga::SQLite3::Statement::reset</a></div><div class="ttdeci">void reset() noexcept</div><div class="ttdoc">Reset statement.</div><div class="ttdef"><b>Definition:</b> Statement.cpp:30</div></div>
 <div class="ttc" id="anamespace_alpaga_html"><div class="ttname"><a href="namespace_alpaga.html">Alpaga</a></div><div class="ttdoc">include all file of Alpaga's cpp library</div></div>
 <div class="ttc" id="aclass_alpaga_1_1_s_q_lite3_1_1_statement_html_a09d22e00cfaa5feeb4a24dd20a58b9d4"><div class="ttname"><a href="class_alpaga_1_1_s_q_lite3_1_1_statement.html#a09d22e00cfaa5feeb4a24dd20a58b9d4">Alpaga::SQLite3::Statement::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">clear binding</div><div class="ttdef"><b>Definition:</b> Statement.cpp:25</div></div>

@@ -189,6 +189,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alpaga_1_1_s_q_lite3_1_1_statement.html#a9b15afc355d91a8f5f557f77edac6be3">stepAndClean</a> ()</td></tr>
 <tr class="memdesc:a9b15afc355d91a8f5f557f77edac6be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call function 1. Step() 2. Clear() 3. Reset() <br /></td></tr>
 <tr class="separator:a9b15afc355d91a8f5f557f77edac6be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe6431d4f0579413cc08c667c347eaf5"><td class="memItemLeft" align="right" valign="top">sqlite3_stmt *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_alpaga_1_1_s_q_lite3_1_1_statement.html#afe6431d4f0579413cc08c667c347eaf5">getStmt</a> ()</td></tr>
+<tr class="memdesc:afe6431d4f0579413cc08c667c347eaf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get stmt.  <a href="class_alpaga_1_1_s_q_lite3_1_1_statement.html#afe6431d4f0579413cc08c667c347eaf5">More...</a><br /></td></tr>
+<tr class="separator:afe6431d4f0579413cc08c667c347eaf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generate a statement for sqlite3. </p>
@@ -332,7 +335,7 @@ template&lt;typename T , typename... Args&gt; </div>
 <p>Bind agrument to the statement. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">start</td><td>postion of the first statement </td></tr>
+    <tr><td class="paramname">start</td><td>postion of the first statement starting att 1 </td></tr>
     <tr><td class="paramname">first</td><td>First arguement </td></tr>
     <tr><td class="paramname">args</td><td>Unlimited number of argument to bind</td></tr>
   </table>
@@ -371,11 +374,31 @@ template&lt;typename T &gt; </div>
 <p>Get column value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">pos</td><td>Position of the column start 1 not 0 !!!!</td></tr>
+    <tr><td class="paramname">pos</td><td>Position of the column starting at 0</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Template type </dd></dl>
+
+</div>
+</div>
+<a id="afe6431d4f0579413cc08c667c347eaf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe6431d4f0579413cc08c667c347eaf5">&#9670;&nbsp;</a></span>getStmt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sqlite3_stmt * Alpaga::SQLite3::Statement::getStmt </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get stmt. </p>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the current statement </dd></dl>
 
 </div>
 </div>
