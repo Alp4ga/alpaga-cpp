@@ -37,7 +37,7 @@ void Alpaga::SQLite3::Database::close() {
 
 void Alpaga::SQLite3::Database::boost(size_t memorySize) noexcept {
 	sqlite3_exec(_db, "PRAGMA synchronous = OFF", NULL, NULL, NULL);
-	sqlite3_exec(_db, "PRAGMA journal_mode = WAL", NULL, NULL, NULL);
+	sqlite3_exec(_db, "PRAGMA journal_mode = MEMORY", NULL, NULL, NULL);
 	if (memorySize != 0) {
 		auto cache_size = "PRAGMA cache_size = " + std::to_string(memorySize);
 		sqlite3_exec(_db, cache_size.c_str(), NULL, NULL, NULL);

@@ -1,0 +1,72 @@
+\hypertarget{class_alpaga_1_1_thread_1_1_thread_pool}{}\doxysection{Alpaga\+::Thread\+::Thread\+Pool Class Reference}
+\label{class_alpaga_1_1_thread_1_1_thread_pool}\index{Alpaga::Thread::ThreadPool@{Alpaga::Thread::ThreadPool}}
+
+
+Create and manage thread\+Poll Cross-\/platforme.  
+
+
+
+
+{\ttfamily \#include $<$Thread\+Pool.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_alpaga_1_1_thread_1_1_thread_pool_a87c6b2f3ac75a8b870fc93038a9d99d6}{Thread\+Pool}} (size\+\_\+t nbr\+Thread)
+\begin{DoxyCompactList}\small\item\em Constructor Generate thread. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class F , class... Args$>$ }\\auto \mbox{\hyperlink{class_alpaga_1_1_thread_1_1_thread_pool_a32e5abc3c50d4a8368771e7865cd8ff5}{task}} (F \&\&fct, Args \&\&... arguments) -\/$>$ std\+::future$<$ typename std\+::result\+\_\+of$<$ F(Args...)$>$\+::type $>$
+\begin{DoxyCompactList}\small\item\em more\+Work add task in salves queue \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_thread_1_1_thread_pool_a24457b5c430ab00ed286cb7fc890a6bd}\label{class_alpaga_1_1_thread_1_1_thread_pool_a24457b5c430ab00ed286cb7fc890a6bd}} 
+\mbox{\hyperlink{class_alpaga_1_1_thread_1_1_thread_pool_a24457b5c430ab00ed286cb7fc890a6bd}{$\sim$\+Thread\+Pool}} () noexcept
+\begin{DoxyCompactList}\small\item\em Descrutor class Threadpool Wait thread to finish before destroy them. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Create and manage thread\+Poll Cross-\/platforme. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_alpaga_1_1_thread_1_1_thread_pool_a87c6b2f3ac75a8b870fc93038a9d99d6}\label{class_alpaga_1_1_thread_1_1_thread_pool_a87c6b2f3ac75a8b870fc93038a9d99d6}} 
+\index{Alpaga::Thread::ThreadPool@{Alpaga::Thread::ThreadPool}!ThreadPool@{ThreadPool}}
+\index{ThreadPool@{ThreadPool}!Alpaga::Thread::ThreadPool@{Alpaga::Thread::ThreadPool}}
+\doxysubsubsection{\texorpdfstring{ThreadPool()}{ThreadPool()}}
+{\footnotesize\ttfamily Alpaga\+::\+Thread\+::\+Thread\+Pool\+::\+Thread\+Pool (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{nbr\+Thread }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Constructor Generate thread. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nbr\+Thread} & Number of thread in the thread pool \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_alpaga_1_1_thread_1_1_thread_pool_a32e5abc3c50d4a8368771e7865cd8ff5}\label{class_alpaga_1_1_thread_1_1_thread_pool_a32e5abc3c50d4a8368771e7865cd8ff5}} 
+\index{Alpaga::Thread::ThreadPool@{Alpaga::Thread::ThreadPool}!task@{task}}
+\index{task@{task}!Alpaga::Thread::ThreadPool@{Alpaga::Thread::ThreadPool}}
+\doxysubsubsection{\texorpdfstring{task()}{task()}}
+{\footnotesize\ttfamily template$<$class F , class... Args$>$ \\
+auto Alpaga\+::\+Thread\+::\+Thread\+Pool\+::task (\begin{DoxyParamCaption}\item[{F \&\&}]{fct,  }\item[{Args \&\&...}]{arguments }\end{DoxyParamCaption}) -\/$>$ std\+::future$<$typename std\+::result\+\_\+of$<$F(Args...)$>$\+::type$>$
+		\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+more\+Work add task in salves queue 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fct} & Function to call by the thread \\
+\hline
+{\em arguments} & argument for the function task\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+future -\/$>$ guess the return type 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Alpaga/\+Thread/Thread\+Pool.\+hpp\end{DoxyCompactItemize}

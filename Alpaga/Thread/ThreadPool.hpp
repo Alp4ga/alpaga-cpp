@@ -21,14 +21,19 @@
  * @brief include all file of Alpaga's cpp library
 */
 namespace Alpaga {
-	class ThreadPool;
+	/*! @namespace Thread
+	* @brief Include all Class/Function with thread manipulation
+	*/
+	namespace Thread {
+		class ThreadPool;
+	};
 };
 
-/*! @class Alpaga::ThreadPool
+/*! @class Alpaga::Thread::ThreadPool
  * @brief Create and manage threadPoll Cross-platforme
  *
 */
-class Alpaga::ThreadPool {
+class Alpaga::Thread::ThreadPool {
 	public:
 		/*! @brief Constructor Generate thread
 		 *
