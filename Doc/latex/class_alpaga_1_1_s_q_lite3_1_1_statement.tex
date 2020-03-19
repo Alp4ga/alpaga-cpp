@@ -74,17 +74,19 @@ template$<$$>$ const char $\ast$ \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1
 \mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_aae64dce42c58c778cbe0b8c0cee4c6f6}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_aae64dce42c58c778cbe0b8c0cee4c6f6}} 
 bool \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_aae64dce42c58c778cbe0b8c0cee4c6f6}{step}} () noexcept
 \begin{DoxyCompactList}\small\item\em Execute statement. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_ad55985521e1bc645a13bb13b9601a3ef}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_ad55985521e1bc645a13bb13b9601a3ef}} 
+bool \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_ad55985521e1bc645a13bb13b9601a3ef}{exec}} () noexcept
+\begin{DoxyCompactList}\small\item\em Execute statement. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_a09d22e00cfaa5feeb4a24dd20a58b9d4}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_a09d22e00cfaa5feeb4a24dd20a58b9d4}} 
 void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_a09d22e00cfaa5feeb4a24dd20a58b9d4}{clear}} ()
 \begin{DoxyCompactList}\small\item\em clear binding \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_af7f704834674762c91a59251aea7b0be}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_af7f704834674762c91a59251aea7b0be}} 
 void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_af7f704834674762c91a59251aea7b0be}{reset}} () noexcept
 \begin{DoxyCompactList}\small\item\em Reset statement. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_a9b15afc355d91a8f5f557f77edac6be3}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_a9b15afc355d91a8f5f557f77edac6be3}} 
-void \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_a9b15afc355d91a8f5f557f77edac6be3}{step\+And\+Clean}} ()
-\begin{DoxyCompactList}\small\item\em Call function 1. Step() 2. Clear() 3. Reset() \end{DoxyCompactList}\item 
-sqlite3\+\_\+stmt $\ast$ \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_afe6431d4f0579413cc08c667c347eaf5}{get\+Stmt}} ()
-\begin{DoxyCompactList}\small\item\em Get stmt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+sqlite3\+\_\+stmt $\ast$ \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_aa308d474af22e4897b57f93567ad08b8}{get\+Stmt}} () const
+\begin{DoxyCompactList}\small\item\em Get stmt. \end{DoxyCompactList}\item 
+const std\+::string \& \mbox{\hyperlink{class_alpaga_1_1_s_q_lite3_1_1_statement_a8dff7d06a2c361bdc9d4002b42befbae}{err\+Msg}} () const
+\begin{DoxyCompactList}\small\item\em Get the last error message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -174,11 +176,24 @@ Get column value.
 \begin{DoxyReturn}{Returns}
 Template type 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_afe6431d4f0579413cc08c667c347eaf5}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_afe6431d4f0579413cc08c667c347eaf5}} 
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_a8dff7d06a2c361bdc9d4002b42befbae}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_a8dff7d06a2c361bdc9d4002b42befbae}} 
+\index{Alpaga::SQLite3::Statement@{Alpaga::SQLite3::Statement}!errMsg@{errMsg}}
+\index{errMsg@{errMsg}!Alpaga::SQLite3::Statement@{Alpaga::SQLite3::Statement}}
+\doxysubsubsection{\texorpdfstring{errMsg()}{errMsg()}}
+{\footnotesize\ttfamily const std\+::string \& Alpaga\+::\+S\+Q\+Lite3\+::\+Statement\+::err\+Msg (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the last error message. 
+
+\begin{DoxyReturn}{Returns}
+Return string with the last error message 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_alpaga_1_1_s_q_lite3_1_1_statement_aa308d474af22e4897b57f93567ad08b8}\label{class_alpaga_1_1_s_q_lite3_1_1_statement_aa308d474af22e4897b57f93567ad08b8}} 
 \index{Alpaga::SQLite3::Statement@{Alpaga::SQLite3::Statement}!getStmt@{getStmt}}
 \index{getStmt@{getStmt}!Alpaga::SQLite3::Statement@{Alpaga::SQLite3::Statement}}
 \doxysubsubsection{\texorpdfstring{getStmt()}{getStmt()}}
-{\footnotesize\ttfamily sqlite3\+\_\+stmt $\ast$ Alpaga\+::\+S\+Q\+Lite3\+::\+Statement\+::get\+Stmt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily sqlite3\+\_\+stmt $\ast$ Alpaga\+::\+S\+Q\+Lite3\+::\+Statement\+::get\+Stmt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 
 
