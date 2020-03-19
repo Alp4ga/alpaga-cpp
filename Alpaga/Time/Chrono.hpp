@@ -61,6 +61,11 @@ class Alpaga::Time::Chrono {
 		 * @brief Restart the clock to 0
 		*/
 		void restart() noexcept;
+		/*! @brief Cast time in string
+		 *
+		 * @return String of current time
+		*/
+		std::string str();
 
 	private:
 		/*!

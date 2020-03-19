@@ -53,7 +53,7 @@ class Alpaga::SQLite3::Database {
 		/*!
 		 * @brief Destructor object Close database.
 		*/
-		~Database() noexcept;
+		~Database() noexcept = default;
 		/*!
 		 * @brief Default copy constructor class Database
 		*/

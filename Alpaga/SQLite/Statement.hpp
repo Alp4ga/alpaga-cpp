@@ -125,6 +125,10 @@ class Alpaga::SQLite3::Statement {
 		*/
 		bool step() noexcept;
 		/*!
+		 * @brief Execute statement
+		*/
+		bool exec() noexcept;
+		/*!
 		 * @brief clear binding
 		*/
 		void clear();
@@ -132,21 +136,32 @@ class Alpaga::SQLite3::Statement {
 		 * @brief Reset statement
 		*/
 		void reset() noexcept;
-		/*!
-		 * @brief Call function 1. Step() 2. Clear() 3. Reset()
-		*/
-		void stepAndClean();
 
 	public:
 		/*!
 		 * @brief Get stmt
 		 * @return Pointer to the current statement
 		*/
-		sqlite3_stmt *getStmt();
+		sqlite3_stmt *getStmt() const;
+
+	public:
+		/*!
+		 * @brief Get the last error message
+		 * @return Return string with the last error message
+		*/
+		const std::string &errMsg() const;
 
 	private:
 		/*!
 		 * @brief Pointer to the current statement
 		*/
 		sqlite3_stmt *_stmt;
+		/*!
+		 * @brief Database use for the statement
+		*/
+		SQLite3::Database _db;
+		/*!
+		 * @brief Last error message register
+		*/
+		std::string _err;
 };

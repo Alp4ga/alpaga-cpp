@@ -60,6 +60,21 @@ class Alpaga::Thread::ThreadPool {
 			}
 		}
 
+		/*!
+		 * @brief Descrutor class Threadpool
+		 * Wait thread to finish before destroy them
+		*/
+		~ThreadPool() noexcept
+		{
+			{
+				std::unique_lock<std::mutex> lock(_mutex);
+				_stop = true;
+			}
+			_condition.notify_all();
+			for (auto &slave : _slaves)
+        		slave.join();
+		}
+
 		/*! @brief moreWork add task in salves queue
 		 *
 		 * @param fct Function to call by the thread
@@ -82,21 +97,6 @@ class Alpaga::Thread::ThreadPool {
 			}
 			_condition.notify_one();
 			return result;
-		}
-
-		/*!
-		 * @brief Descrutor class Threadpool
-		 * Wait thread to finish before destroy them
-		*/
-		~ThreadPool() noexcept
-		{
-			{
-				std::unique_lock<std::mutex> lock(_mutex);
-				_stop = true;
-			}
-			_condition.notify_all();
-			for (auto &slave : _slaves)
-        		slave.join();
 		}
 
 	private:

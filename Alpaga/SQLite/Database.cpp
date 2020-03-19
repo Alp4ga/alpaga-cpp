@@ -5,6 +5,7 @@
  * @Last Modified time: 2020-02-14 19:37:21
 */
 
+#include <iostream>
 #include <stdexcept>
 
 #include "Database.hpp"
@@ -16,11 +17,6 @@ Alpaga::SQLite3::Database::Database() noexcept
 Alpaga::SQLite3::Database::Database(const std::string &filename, int flags, const char *zVfs) {
 	if (sqlite3_open_v2(filename.c_str(), &_db, flags, zVfs) != SQLITE_OK)
 		throw std::runtime_error("[SQLite3]: Failed open database: " + std::string(sqlite3_errmsg(_db)));
-}
-
-Alpaga::SQLite3::Database::~Database() noexcept {
-	if (_db != nullptr)
-		sqlite3_close_v2(_db);
 }
 
 void Alpaga::SQLite3::Database::open(const std::string &filename, int flags, const char *zVfs) {

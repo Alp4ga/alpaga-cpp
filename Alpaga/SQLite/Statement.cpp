@@ -9,8 +9,11 @@
 
 #include "Statement.hpp"
 
-Alpaga::SQLite3::Statement::Statement(SQLite3::Database &db, const std::string &statement) {
-	if (sqlite3_prepare_v2(db.getDatabasePtr(), statement.c_str(), -1, &_stmt, NULL) != SQLITE_OK)
+Alpaga::SQLite3::Statement::Statement(SQLite3::Database &db, const std::string &statement)
+	: _db(db)
+{
+	auto ret = sqlite3_prepare(db.getDatabasePtr(), statement.c_str(), -1, &_stmt, NULL);
+	if (ret != SQLITE_OK)
 		throw std::runtime_error("[SQLite3]: Prepare failed. " +  std::string(sqlite3_errmsg(db.getDatabasePtr())));
 }
 
@@ -19,7 +22,17 @@ Alpaga::SQLite3::Statement::~Statement() noexcept {
 }
 
 bool Alpaga::SQLite3::Statement::step() noexcept {
-	return sqlite3_step(_stmt) == SQLITE_ROW;
+	auto ret = sqlite3_step(_stmt);
+	if (ret != SQLITE_ROW)
+		_err = sqlite3_errmsg(_db.getDatabasePtr());
+	return ret == SQLITE_ROW;
+}
+
+bool Alpaga::SQLite3::Statement::exec() noexcept {
+	auto ret = sqlite3_step(_stmt);
+	if (ret != SQLITE_DONE)
+		_err = sqlite3_errmsg(_db.getDatabasePtr());
+	return ret == SQLITE_DONE;
 }
 
 void Alpaga::SQLite3::Statement::clear() {
@@ -31,12 +44,10 @@ void Alpaga::SQLite3::Statement::reset() noexcept {
 	sqlite3_reset(_stmt);
 }
 
-void Alpaga::SQLite3::Statement::stepAndClean() {
-	this->step();
-	this->clear();
-	this->reset();
+sqlite3_stmt *Alpaga::SQLite3::Statement::getStmt() const {
+	return _stmt;
 }
 
-sqlite3_stmt *Alpaga::SQLite3::Statement::getStmt() {
-	return _stmt;
+const std::string &Alpaga::SQLite3::Statement::errMsg() const {
+	return _err;
 }
