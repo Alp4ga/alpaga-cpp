@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.0)
+
+message("CMAKE_CURRENT_LIST_DIR is ${CMAKE_CURRENT_LIST_DIR}") 
+
+if(WIN32)
+	link_directories(${CMAKE_CURRENT_LIST_DIR}/mysql-connector-cpp/lib/windows)
+elseif(UNIX)
+	link_directories(${CMAKE_CURRENT_LIST_DIR}/mysql-connector-cpp/lib/unix)
+endif()
+
+set(MYSQL_INCLUDES ${CMAKE_CURRENT_LIST_DIR}/mysql-connector-cpp/include)
+set(MYSQL_LIB mysqlcppconn8)
+
+
+function(MYSQL_DLL PATH)
+	message(PARAM ${PATH})
+	add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+		COMMAND ${CMAKE_COMMAND} -E copy_if_different "${PATH}/mysql-connector-cpp/lib/windows/dll/libcrypto-1_1-x64.dll" $<TARGET_FILE_DIR:${PROJECT_NAME}>
+		COMMAND ${CMAKE_COMMAND} -E copy_if_different "${PATH}/mysql-connector-cpp/lib/windows/dll/libssl-1_1-x64.dll" $<TARGET_FILE_DIR:${PROJECT_NAME}>
+		COMMAND ${CMAKE_COMMAND} -E copy_if_different "${PATH}/mysql-connector-cpp/lib/windows/dll/mysqlcppconn-7-vs14.dll" $<TARGET_FILE_DIR:${PROJECT_NAME}>
+		COMMAND ${CMAKE_COMMAND} -E copy_if_different "${PATH}/mysql-connector-cpp/lib/windows/dll/mysqlcppconn8-2-vs14.dll" $<TARGET_FILE_DIR:${PROJECT_NAME}>
+	)
+endfunction()

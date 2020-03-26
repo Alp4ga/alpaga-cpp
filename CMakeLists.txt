@@ -7,4 +7,4 @@ include(Alpaga/Alpaga.cmake)
 
 if (${ALPAGA_TESTS})
     include(Tests/Tests.cmake)
-endif ()
+endif()
