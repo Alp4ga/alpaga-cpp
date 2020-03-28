@@ -24,22 +24,25 @@ conan_cmake_run(REQUIRES
 	boost/1.71.0@conan/stable
     BASIC_SETUP
 	BUILD missing
+	CMAKE_TARGETS
 )
 
 set(SOURCES
-	${CMAKE_CURRENT_LIST_DIR}/database/mysql/database.cpp
-	${CMAKE_CURRENT_LIST_DIR}/database/mysql/database.hpp
+	${CMAKE_CURRENT_LIST_DIR}/database/mariadb/database.cpp
+	${CMAKE_CURRENT_LIST_DIR}/database/mariadb/database.hpp
 )
-
 add_library(${PROJECT_NAME} STATIC ${SOURCES})
 
-#########################
-#	EXTRA DEPENDENCIES	#
-#########################
-include(${CMAKE_CURRENT_LIST_DIR}/database/mysql/CMakeLists.txt.in)
-include_directories(${PROJECT_NAME} PRIVATE
-	${MYSQL_INCLUDES}
-)
+#################################
+#	EXTRA DEPENDENCIES MARIADB	#
+#################################
+if(WIN32)
+	link_directories(${CMAKE_CURRENT_LIST_DIR}/database/mariadb/mariadb-connector/windows)
+elseif(UNIX)
+	link_directories(${CMAKE_CURRENT_LIST_DIR}/database/mariadb/mariadb-connector/unix)
+endif()
+set(MARIADB_LIB libmariadb mariadbclient)
+include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_LIST_DIR}/database/mariadb/mariadb-connector/include)
 
 #########################
 #	INCLUDE DIRECTORY	#
@@ -50,8 +53,8 @@ set(ALPAGA_INCLUDES ${CMAKE_CURRENT_LIST_DIR})
 #	LIB 	#
 #############
 target_link_libraries(${PROJECT_NAME} PUBLIC 
-	${CONAN_LIBS}
-	${MYSQL_LIB}
+	${MARIADB_LIB}
+	CONAN_PKG::boost
 )
 set_property(TARGET ${PROJECT_NAME} PROPERTY POSITION_INDEPENDENT_CODE ON)
 
@@ -59,5 +62,7 @@ set_property(TARGET ${PROJECT_NAME} PROPERTY POSITION_INDEPENDENT_CODE ON)
 #	DLL WINDOWS	#
 #################
 if(WIN32)
-	MYSQL_DLL("${CMAKE_CURRENT_LIST_DIR}/database/mysql")
+	add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+		COMMAND ${CMAKE_COMMAND} -E copy_if_different "${CMAKE_CURRENT_LIST_DIR}/database/mariadb/mariadb-connector/windows/libmariadb.dll" $<TARGET_FILE_DIR:${PROJECT_NAME}>
+	)
 endif(WIN32)
