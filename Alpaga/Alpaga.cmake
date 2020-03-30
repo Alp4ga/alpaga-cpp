@@ -28,8 +28,13 @@ conan_cmake_run(REQUIRES
 )
 
 set(SOURCES
-	${CMAKE_CURRENT_LIST_DIR}/database/mariadb/database.cpp
-	${CMAKE_CURRENT_LIST_DIR}/database/mariadb/database.hpp
+	###########
+	# MARIADB #
+	###########
+	${CMAKE_CURRENT_LIST_DIR}/database/mariadb/Database.cpp
+	${CMAKE_CURRENT_LIST_DIR}/database/mariadb/Database.hpp
+	${CMAKE_CURRENT_LIST_DIR}/database/mariadb/Statement.cpp
+	${CMAKE_CURRENT_LIST_DIR}/database/mariadb/Statement.hpp
 )
 add_library(${PROJECT_NAME} STATIC ${SOURCES})
 

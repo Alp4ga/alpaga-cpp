@@ -1,0 +1,30 @@
+/*
+ * Company: Your Company
+ * File: tests_config.hpp.in
+ * Project: mariadb
+ * File Created: Monday, 30th March 2020 4:45:46 pm
+ * Author: Alp4ga (you@you.you)
+ * -----
+ * Last Modified: Monday, 30th March 2020 4:45:54 pm
+ * Modified By: Alp4ga (you@you.you>)
+ * -----
+ */
+
+#pragma once
+
+/*! @namespace Mariadb
+ * @brief Include all class about mariadb-connector-cpp
+*/
+namespace Mariadb {
+	/*! @namespace TestsConfig
+	 * @brief Configugration environement test
+	*/
+	namespace TestsConfig {
+		static constexpr const char *HOSTNAME = "@TEST_HOSTNAME@";
+		static const std::uint32_t PORT = @TEST_PORT@;
+		static constexpr const char *USER = "@TEST_USERNAME@";
+		static constexpr const char *PASSWORD = "@TEST_PASSWORD@";
+		static constexpr const char *SOCKET_UNIX = "@TEST_UNIXSOCKET@";
+		static constexpr const char *DATABASE = "@TEST_DATABASE@";
+	};
+};
