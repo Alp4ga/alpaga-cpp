@@ -18,7 +18,7 @@
 TEST(DATABASE_MARIADB, database_connection_success)
 {
 	Mariadb::Database db;
-	db.connection("tcp://127.0.0.1", "root", "root", "", 3307);
+	db.connection("localhost", "root", "root", "", 3307);
 	//auto res = db.connect("tcp://127.0.0.1:3307", "root", "root");
 	ASSERT_EQ(true, true);
 }

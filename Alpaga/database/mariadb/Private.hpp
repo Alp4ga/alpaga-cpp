@@ -10,3 +10,29 @@
  * -----
  */
 
+#include <iostream>
+
+/*!
+ * @brief Use for internal error
+*/
+#define MARIADB_INTERNAL_ERROR(error)							\
+	std::cerr << "[Mariadb Error]: " << error << std::endl		\
+			  << "In function: " << __FUNCTION__ << std::endl	\
+			  << "In file: " << __FILE__ << std::endl			\
+			  << "On line: " << __LINE__ << std::endl;
+
+/*!
+ * @brief Use for mariadb error
+*/
+#define MARIADB_ERROR(mysql)										\
+	std::cerr << "[Mariadb Error(" << mysql_errno(mysql) << ")]: "	\
+			  << mysql_error(mysql) << std::endl					\
+			  << "In function: " << __FUNCTION__ << std::endl		\
+			  << "In file: " << __FILE__ << std::endl				\
+			  << "On line: " << __LINE__ << std::endl;
+
+/*!
+ * @brief Use to display a simple message
+*/
+#define MARIABD_COUT(message)							\
+	std::cout << "[Mariadb] " << message << std::endl;
